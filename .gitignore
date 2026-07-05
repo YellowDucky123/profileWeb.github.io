@@ -1,0 +1,14 @@
+# secrets — never commit these
+.env
+.env.*
+*.pem
+*.key
+
+# dependencies / build junk (site has none, but just in case)
+node_modules/
+dist/
+
+# editor & OS noise
+.DS_Store
+Thumbs.db
+*.log
