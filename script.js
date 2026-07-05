@@ -50,30 +50,31 @@ async function typeTerminal() {
 typeTerminal();
 
 /* ---------- resume auto-detection ----------
-   Convention: put `resume.pdf` in the repo root and this section
-   lights up on its own. No config, no accounts, no build step.  */
+   Convention: the resume section, nav link and hero button only exist
+   if a `resume.pdf` sits in the repo root. Without it the site is
+   complete on its own. No config, no accounts, no build step.  */
 
-const foundEl = document.getElementById("resume-found");
-const missingEl = document.getElementById("resume-missing");
+function showResume(sizeBytes) {
+    document.getElementById("resume").hidden = false;
+    document.querySelectorAll(".resume-link").forEach((el) => (el.hidden = false));
+    if (sizeBytes > 0) {
+        const kb = sizeBytes / 1024;
+        document.getElementById("resume-meta").textContent =
+            "resume.pdf · " + (kb > 1024 ? (kb / 1024).toFixed(1) + " MB" : Math.max(1, Math.round(kb)) + " KB");
+    }
+    // keep section numbers gapless now that a section appeared mid-page
+    document.querySelectorAll("main .section:not([hidden]) .section-no")
+        .forEach((el, i) => (el.textContent = String(i + 1).padStart(2, "0")));
+}
 
 fetch("resume.pdf", { method: "HEAD" })
     .then((res) => {
-        if (res.ok) {
-            foundEl.hidden = false;
-            const bytes = Number(res.headers.get("Content-Length"));
-            if (bytes > 0) {
-                const kb = bytes / 1024;
-                document.getElementById("resume-meta").textContent =
-                    "resume.pdf · " + (kb > 1024 ? (kb / 1024).toFixed(1) + " MB" : Math.max(1, Math.round(kb)) + " KB");
-            }
-        } else {
-            missingEl.hidden = false;
-        }
+        if (res.ok) showResume(Number(res.headers.get("Content-Length")));
     })
     .catch(() => {
-        // fetch can fail on file:// — optimistically show the download
-        // buttons; the <object> tag has its own fallback message.
-        foundEl.hidden = false;
+        // fetch can fail on file:// — optimistically show the resume;
+        // the <object> tag has its own fallback message.
+        showResume(0);
     });
 
 /* ---------- cursor spotlight ---------- */

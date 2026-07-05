@@ -27,7 +27,7 @@
         <nav class="nav-links">
             <a href="#about">about</a>
             <a href="#skills">loadout</a>
-            <a href="#resume">resume</a>
+            <a href="#resume" class="resume-link" hidden>resume</a>
             <a href="#contact">contact</a>
         </nav>
     </header>
@@ -45,8 +45,8 @@
                     apart to understand why they were ever whole.
                 </p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#resume">📄 View resume</a>
-                    <a class="btn btn-ghost" href="#contact">Say hi →</a>
+                    <a class="btn btn-primary" href="#contact">Say hi →</a>
+                    <a class="btn btn-ghost resume-link" href="#resume" hidden>📄 View resume</a>
                 </div>
                 <p class="hero-status mono">
                     <span class="status-dot" aria-hidden="true"></span> open to opportunities
@@ -125,12 +125,13 @@
             </div>
         </section>
 
-        <!-- ============ RESUME ============ -->
-        <section class="section" id="resume">
+        <!-- ============ RESUME ============
+             Optional: this whole section (and the resume nav/hero links)
+             stays hidden unless a resume.pdf exists in the repo root. -->
+        <section class="section" id="resume" hidden>
             <h2 class="section-title mono reveal"><span class="section-no">03</span> resume</h2>
 
-            <!-- Shown when resume.pdf exists in the repo -->
-            <div class="resume-found reveal" id="resume-found" hidden>
+            <div class="resume-found reveal">
                 <div class="resume-actions">
                     <a class="btn btn-primary" href="resume.pdf" download="Kelvin_Jonathan_Yoga_Resume.pdf">⬇ Download PDF</a>
                     <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a>
@@ -145,18 +146,11 @@
                     </object>
                 </div>
             </div>
-
-            <!-- Shown when resume.pdf is missing -->
-            <div class="resume-missing mono reveal" id="resume-missing" hidden>
-                <p>$ cat resume.pdf</p>
-                <p class="dim">cat: resume.pdf: No such file or directory</p>
-                <p class="dim">// resume coming soon — drop <b>resume.pdf</b> in the repo root and it appears here automatically.</p>
-            </div>
         </section>
 
         <!-- ============ CONTACT ============ -->
         <section class="section" id="contact">
-            <h2 class="section-title mono reveal"><span class="section-no">04</span> contact</h2>
+            <h2 class="section-title mono reveal"><span class="section-no">03</span> contact</h2>
             <p class="contact-lead reveal">Inbox always open. The fastest way to reach me:</p>
             <div class="contact-cards">
                 <button class="contact-card reveal" id="copy-email" type="button" title="Click to copy">

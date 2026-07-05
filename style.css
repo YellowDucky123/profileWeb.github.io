@@ -25,6 +25,9 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* make the hidden attribute win over display rules like .btn's inline-flex */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -414,17 +417,6 @@ main {
 }
 
 .resume-fallback { padding: 40px; text-align: center; color: var(--text-dim); }
-
-.resume-missing {
-    background: var(--bg-card);
-    border: 1px dashed var(--line);
-    border-radius: var(--radius);
-    padding: 28px;
-    font-size: 0.9rem;
-    line-height: 2;
-}
-.resume-missing p:first-child::before { content: ""; }
-.resume-missing b { color: var(--accent); }
 
 /* ---------- contact ---------- */
 
