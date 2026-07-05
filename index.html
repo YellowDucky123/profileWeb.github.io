@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kelvin Jonathan Yoga — Computer Science (Security Engineering) student at UNSW.">
+    <meta name="description" content="Kelvin Jonathan Yoga — post-quantum cryptography researcher and Computer Science (Security Engineering) student at UNSW.">
     <meta name="theme-color" content="#242c13">
     <!-- GitHub Pages can't set response headers, so security policy goes in meta tags.
          No inline scripts/styles are used, so CSP can stay strict. -->
@@ -40,9 +40,10 @@
                 <p class="hero-hello mono">// hello, world</p>
                 <h1 class="hero-name" data-text="Kelvin Jonathan Yoga">Kelvin&nbsp;Jonathan Yoga</h1>
                 <p class="hero-tagline">
-                    Computer Science student at <strong>UNSW</strong>, majoring in
-                    <span class="accent">Security Engineering</span>. I like taking things
-                    apart to understand why they were ever whole.
+                    <span class="accent">Post-quantum cryptography</span> researcher and
+                    Computer Science (Security Engineering) student at <strong>UNSW</strong>.
+                    I build protocols meant to stay secure after quantum computers
+                    break everything else.
                 </p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#contact">Say hi →</a>
@@ -70,25 +71,29 @@
             <div class="about-grid">
                 <div class="reveal">
                     <p class="about-lead">
-                        I'm a 2nd-year Computer Science student at UNSW Sydney,
-                        specialising in security engineering.
+                        I'm a Computer Science (Security Engineering) student at UNSW Sydney,
+                        currently leading a post-quantum cryptography research project under
+                        Dr. Sushmita Ruj.
                     </p>
                     <p>
-                        Right now I'm sharpening my fundamentals — systems, networks, and the
-                        creative ways both can be broken. I'm keen on joining programs and teams
-                        where I can build real things with real people (👋 DevSoc).
+                        My work lives where theory meets implementation: designing and formally
+                        proving post-quantum group authentication protocols and zero-knowledge
+                        proof systems on zero-trust architecture, then writing the proof-of-concept
+                        code and benchmarking it. Before that I built secure Python backends and
+                        CI/CD pipelines as a Security &amp; Backend Engineer at Solar Central.
                     </p>
                     <p>
-                        When I'm not staring at a stack trace, I'm probably poking at a CTF
-                        challenge or convincing myself that <em>this</em> side project will be
-                        the one I actually finish.
+                        Off the clock I'm usually deep in a side quest — a Reed-Solomon codec
+                        in C++, a proxy server in C, a fuzzing engine in Python — or poking at
+                        a CTF. Most recently: 1st place at USyd's AI × Creativity hackathon.
                     </p>
                 </div>
                 <ul class="facts mono reveal">
                     <li><span class="facts-key">location</span>Sydney, AU</li>
                     <li><span class="facts-key">degree</span>BSc CompSci @ UNSW</li>
                     <li><span class="facts-key">major</span>Security Engineering</li>
-                    <li><span class="facts-key">year</span>2nd</li>
+                    <li><span class="facts-key">focus</span>post-quantum crypto</li>
+                    <li><span class="facts-key">class of</span>2026</li>
                     <li><span class="facts-key">uptime</span><span id="uptime">…</span></li>
                 </ul>
             </div>
@@ -99,27 +104,27 @@
             <h2 class="section-title mono reveal"><span class="section-no">02</span> loadout</h2>
             <div class="cards">
                 <article class="card reveal">
+                    <div class="card-icon" aria-hidden="true">🔐</div>
+                    <h3>Cryptography</h3>
+                    <p>Post-quantum crypto, zero-knowledge proofs and PKI — design the protocol, prove it, then benchmark the PoC.</p>
+                    <div class="chips mono">
+                        <span class="chip">pqc</span><span class="chip">zk-proofs</span><span class="chip">pki</span>
+                    </div>
+                </article>
+                <article class="card reveal">
                     <div class="card-icon" aria-hidden="true">🛡️</div>
                     <h3>Security</h3>
-                    <p>Web security, CTFs, and a healthy paranoia about anything that accepts user input.</p>
+                    <p>Threat modeling, fuzzing, network &amp; wireless security (OSWP curriculum), and a healthy paranoia about anything that accepts user input.</p>
                     <div class="chips mono">
-                        <span class="chip">ctf</span><span class="chip">web sec</span><span class="chip">crypto</span>
+                        <span class="chip">fuzzing</span><span class="chip">threat modeling</span><span class="chip">ctf</span>
                     </div>
                 </article>
                 <article class="card reveal">
                     <div class="card-icon" aria-hidden="true">⚙️</div>
                     <h3>Systems</h3>
-                    <p>Comfortable in the terminal — Linux, git, and scripting my way out of repetitive work.</p>
+                    <p>Low-level by choice — sockets and proxies in C, Rust→C++ ports, Reed-Solomon over Galois fields, Docker'd CI/CD pipelines.</p>
                     <div class="chips mono">
-                        <span class="chip">linux</span><span class="chip">git</span><span class="chip">bash</span>
-                    </div>
-                </article>
-                <article class="card reveal">
-                    <div class="card-icon" aria-hidden="true">🧩</div>
-                    <h3>Building</h3>
-                    <p>From uni assignments to weekend hacks — learning by shipping (and occasionally breaking) things.</p>
-                    <div class="chips mono">
-                        <span class="chip">c</span><span class="chip">python</span><span class="chip">js</span>
+                        <span class="chip">c/c++</span><span class="chip">rust</span><span class="chip">python</span><span class="chip">docker</span>
                     </div>
                 </article>
             </div>
@@ -170,6 +175,15 @@
                     <span>
                         <span class="contact-label mono">whatsapp</span>
                         0481 818 242
+                    </span>
+                </a>
+                <a class="contact-card reveal" href="https://www.linkedin.com/in/kelvinjonathany" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+                        <path d="M4.98 3.5a2.49 2.49 0 1 1-.02 4.98 2.49 2.49 0 0 1 .02-4.98ZM3 9.2h4V21H3V9.2Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-3.96V9.2Z"/>
+                    </svg>
+                    <span>
+                        <span class="contact-label mono">linkedin</span>
+                        kelvinjonathany
                     </span>
                 </a>
                 <a class="contact-card reveal" href="https://github.com/YellowDucky123" target="_blank" rel="noopener noreferrer">

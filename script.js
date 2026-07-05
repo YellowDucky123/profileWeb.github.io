@@ -6,8 +6,8 @@
 
 const TERMINAL_SCRIPT = [
     { cmd: "whoami", out: ["kelvin jonathan yoga"] },
-    { cmd: "cat role.txt", out: ["CS @ UNSW — Security Engineering (2nd yr)"] },
-    { cmd: "ls interests/", out: ["ctf/   web-sec/   linux/   coffee/"] },
+    { cmd: "cat role.txt", out: ["PQ cryptography researcher @ UNSW"] },
+    { cmd: "ls interests/", out: ["pqc/   zk-proofs/   ctf/   coffee/"] },
     { cmd: "sudo make friends", out: ["[sudo] permission granted — scroll down ↓"] },
 ];
 
@@ -136,7 +136,7 @@ document.addEventListener("visibilitychange", () => {
 
 // console greeting for fellow snoopers
 console.log(
-    "%c> whoami\n%ckelvin jonathan yoga — security engineering @ UNSW\n" +
+    "%c> whoami\n%ckelvin jonathan yoga — post-quantum cryptography @ UNSW\n" +
     "%c> nice inspect-element skills. say hi: kelvinjyoga@gmail.com",
     "color:#e9ddb4;font-family:monospace;font-size:14px",
     "color:#f5f5f5;font-family:monospace;font-size:14px",
