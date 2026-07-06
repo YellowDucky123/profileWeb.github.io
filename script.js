@@ -7,7 +7,7 @@
 const TERMINAL_SCRIPT = [
     { cmd: "whoami", out: ["kelvin jonathan yoga"] },
     { cmd: "cat role.txt", out: ["PQ cryptography researcher @ UNSW"] },
-    { cmd: "ls interests/", out: ["pqc/   zk-proofs/   ctf/   coffee/"] },
+    { cmd: "ls interests/", out: ["pqc/   zk-proofs/   ivc-folding/   authenticated-ds/   ctf/"] },
     { cmd: "sudo make friends", out: ["[sudo] permission granted — scroll down ↓"] },
 ];
 
