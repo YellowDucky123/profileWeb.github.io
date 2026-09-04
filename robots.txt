@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yellowducky123.github.io/profileWeb.github.io/sitemap.xml

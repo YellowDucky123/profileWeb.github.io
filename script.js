@@ -73,7 +73,7 @@ fetch("Crypto_CV.pdf", { method: "HEAD" })
     })
     .catch(() => {
         // fetch can fail on file:// — optimistically show the resume;
-        // the <object> tag has its own fallback message.
+        // the rendered page images and download links stand on their own.
         showResume(0);
     });
 

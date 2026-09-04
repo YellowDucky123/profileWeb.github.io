@@ -411,10 +411,14 @@ main {
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
 }
 
-.resume-frame object {
+.resume-page {
     display: block;
     width: 100%;
-    height: min(78vh, 900px);
+    height: auto;
+}
+
+.resume-page + .resume-page {
+    border-top: 1px solid var(--line);
 }
 
 .resume-fallback { padding: 40px; text-align: center; color: var(--text-dim); }
@@ -551,3 +555,46 @@ main {
     }
     .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- 404 ---------- */
+.nf {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    text-align: center;
+    padding: 40px clamp(20px, 5vw, 40px);
+}
+
+.nf-code {
+    font-family: var(--font-mono);
+    font-size: clamp(4rem, 18vw, 9rem);
+    line-height: 1;
+    font-weight: 700;
+    color: var(--accent);
+    text-shadow: 0 0 40px rgba(233, 221, 180, 0.25);
+}
+
+.nf-lead { font-size: clamp(1.1rem, 3vw, 1.4rem); margin-top: -8px; }
+
+.nf-term {
+    width: min(560px, 100%);
+    text-align: left;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    overflow-x: auto;
+}
+
+.nf-term .prompt { color: var(--ok); }
+.nf-term .err { color: var(--accent-2); }

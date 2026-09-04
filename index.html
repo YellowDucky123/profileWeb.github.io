@@ -6,10 +6,60 @@
     <meta name="description" content="Kelvin Jonathan Yoga — post-quantum cryptography researcher and Computer Science (Security Engineering) student at UNSW.">
     <meta name="theme-color" content="#242c13">
     <!-- GitHub Pages can't set response headers, so security policy goes in meta tags.
-         No inline scripts/styles are used, so CSP can stay strict. -->
+         The only inline <script> is a JSON-LD data block, which browsers never
+         execute as JS and CSP never gates — so script-src can stay 'self'. -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Kelvin Jonathan Yoga</title>
+    <link rel="canonical" href="https://yellowducky123.github.io/profileWeb.github.io/">
+
+    <!-- Open Graph / social share card -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kelvin Jonathan Yoga">
+    <meta property="og:url" content="https://yellowducky123.github.io/profileWeb.github.io/">
+    <meta property="og:title" content="Kelvin Jonathan Yoga — post-quantum cryptography researcher">
+    <meta property="og:description" content="Post-quantum cryptography researcher and Computer Science (Security Engineering) student at UNSW. I build protocols meant to stay secure after quantum computers break everything else.">
+    <meta property="og:image" content="https://yellowducky123.github.io/profileWeb.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kelvin Jonathan Yoga — post-quantum cryptography researcher, UNSW Sydney">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kelvin Jonathan Yoga — post-quantum cryptography researcher">
+    <meta name="twitter:description" content="Post-quantum cryptography researcher and Computer Science (Security Engineering) student at UNSW.">
+    <meta name="twitter:image" content="https://yellowducky123.github.io/profileWeb.github.io/og-image.png">
+
+    <!-- Structured data so search engines understand who this is (non-executable data block; not gated by CSP). -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kelvin Jonathan Yoga",
+      "url": "https://yellowducky123.github.io/profileWeb.github.io/",
+      "image": "https://yellowducky123.github.io/profileWeb.github.io/og-image.png",
+      "jobTitle": "Post-quantum cryptography researcher",
+      "description": "Computer Science (Security Engineering) student and post-quantum cryptography researcher at UNSW Sydney.",
+      "email": "mailto:kelvinjyoga@gmail.com",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "UNSW Sydney"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "UNSW Sydney"
+      },
+      "knowsAbout": [
+        "Post-quantum cryptography",
+        "Zero-knowledge proofs",
+        "Security engineering",
+        "Public-key infrastructure",
+        "Fuzzing"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/kelvinjonathany",
+        "https://github.com/YellowDucky123"
+      ]
+    }
+    </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,13 +192,16 @@
                     <a class="btn btn-ghost" href="Crypto_CV.pdf" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a>
                     <span class="mono resume-meta" id="resume-meta"></span>
                 </div>
+                <!-- Pages are rendered to images (resume-page-*.png) so every
+                     browser can preview them — no native PDF plugin required.
+                     Regenerate alongside Crypto_CV.pdf with:
+                     pdftoppm -png -r 150 Crypto_CV.pdf resume-page -->
                 <div class="resume-frame">
-                    <object data="Crypto_CV.pdf" type="application/pdf" aria-label="Embedded resume PDF">
-                        <p class="resume-fallback">
-                            Your browser can't preview PDFs inline —
-                            <a href="Crypto_CV.pdf">download the resume</a> instead.
-                        </p>
-                    </object>
+                    <img class="resume-page" src="resume-page-1.png" alt="Resume, page 1" width="1275" height="1650" loading="lazy" decoding="async">
+                    <img class="resume-page" src="resume-page-2.png" alt="Resume, page 2" width="1275" height="1650" loading="lazy" decoding="async">
+                    <noscript>
+                        <p class="resume-fallback"><a href="Crypto_CV.pdf">Download the resume PDF</a></p>
+                    </noscript>
                 </div>
             </div>
         </section>
