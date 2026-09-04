@@ -51,7 +51,7 @@ typeTerminal();
 
 /* ---------- resume auto-detection ----------
    Convention: the resume section, nav link and hero button only exist
-   if a `resume.pdf` sits in the repo root. Without it the site is
+   if a `Crypto_CV.pdf` sits in the repo root. Without it the site is
    complete on its own. No config, no accounts, no build step.  */
 
 function showResume(sizeBytes) {
@@ -60,14 +60,14 @@ function showResume(sizeBytes) {
     if (sizeBytes > 0) {
         const kb = sizeBytes / 1024;
         document.getElementById("resume-meta").textContent =
-            "resume.pdf · " + (kb > 1024 ? (kb / 1024).toFixed(1) + " MB" : Math.max(1, Math.round(kb)) + " KB");
+            "Crypto_CV.pdf · " + (kb > 1024 ? (kb / 1024).toFixed(1) + " MB" : Math.max(1, Math.round(kb)) + " KB");
     }
     // keep section numbers gapless now that a section appeared mid-page
     document.querySelectorAll("main .section:not([hidden]) .section-no")
         .forEach((el, i) => (el.textContent = String(i + 1).padStart(2, "0")));
 }
 
-fetch("resume.pdf", { method: "HEAD" })
+fetch("Crypto_CV.pdf", { method: "HEAD" })
     .then((res) => {
         if (res.ok) showResume(Number(res.headers.get("Content-Length")));
     })

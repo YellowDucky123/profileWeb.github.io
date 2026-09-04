@@ -5,17 +5,17 @@ just `index.html`, `style.css`, and `script.js`, served straight by GitHub Pages
 
 ## 📄 Updating your resume
 
-Drop a PDF named **`resume.pdf`** into the repo root and push:
+Drop a PDF named **`Crypto_CV.pdf`** into the repo root and push:
 
 ```bash
-cp ~/Downloads/my-new-resume.pdf resume.pdf
-git add resume.pdf
+cp ~/Downloads/my-new-resume.pdf Crypto_CV.pdf
+git add Crypto_CV.pdf
 git commit -m "update resume"
 git push
 ```
 
 That's it. The site auto-detects the file — the Resume section shows an embedded
-viewer plus a download button. If `resume.pdf` is missing, it shows a
+viewer plus a download button. If `Crypto_CV.pdf` is missing, it shows a
 "coming soon" placeholder instead. No config to edit.
 
 ## ✏️ Editing content
